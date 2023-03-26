@@ -12,7 +12,7 @@ import requests
 from .forms import NewUserForm
 
 
-@login_required(login_url="/dev/login/")
+@login_required(login_url="/login/")
 def home(request):
     results = []
     if request.method == "POST":
@@ -45,7 +45,7 @@ def home(request):
     return render(request, 'home.html')
 
 
-@login_required(login_url="/dev/login/")
+@login_required(login_url="/login/")
 def download_file(request):
     if 'scraped_data' in request.session:
         context = request.session['scraped_data']
