@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-977ohb)8q+@@!!2a94123w@5tbp_5f*+-=t%@*dfto9bw$pomw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "vrjlttciya.execute-api.us-east-2.amazonaws.com",
-                 "3.137.159.64"]
+ALLOWED_HOSTS = ["127.0.0.1", "13.58.109.42"]
 
 
 # Application definition
@@ -39,15 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-    'crispy_bootstrap4',
-    'gsearch',
-    'django_s3_storage'
+    'gsearch'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
