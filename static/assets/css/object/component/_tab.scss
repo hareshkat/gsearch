@@ -1,0 +1,64 @@
+@charset "utf-8";
+@use "../../foundation/setting" as *;
+//==========================================================================
+//_tab.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-tab-01
+//-----------------------------------------------------------------
+.c-tab-01 {
+  .c-tab-list {
+    display: flex;
+    align-items: flex-end;
+    @include tab-screen {
+      overflow-x: auto;
+    }
+    @include smMax {
+      overflow-x: auto;
+    }
+    li {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 64px;
+      background: $colorMain;
+      color: #fff;
+      cursor: pointer;
+      text-align: center;
+      @include tab-screen {
+        word-break: keep-all;
+        padding: 0 15px;
+      }
+      @include smMax {
+        font-size: sm_vw(14);
+        height: sm_vw(64);
+        word-break: keep-all;
+        padding: 0 sm_vw(15);
+      }
+      + li {
+        border-left: solid 1px #fff;
+      }
+    }
+    li.is-active {
+      height: 80px;
+      background: #F4FAFF;
+      color: $colorMain;
+      @include smMax {
+        height: sm_vw(80);
+      }
+    }
+  }
+  .c-tab-content {
+    background: #F4FAFF;
+    padding: 40px;
+    display: none;
+    @include smMax {
+      padding: sm_vw(30) sm_vw(20);
+    }
+    &.is-show {
+      display: block;
+    }
+  }
+}

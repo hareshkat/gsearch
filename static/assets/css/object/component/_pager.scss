@@ -1,0 +1,99 @@
+@charset "utf-8";
+@use "../../foundation/setting" as *;
+//==========================================================================
+//_pager.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-pager
+//-----------------------------------------------------------------
+.c-pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .c-pager__arrow {
+    a {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px $colorMain;
+      @include smMax {
+        width: sm_vw(64);
+        height: sm_vw(64);
+      }
+      svg {
+        width: 12px;
+        height: 12px;
+        stroke: $colorMain;
+        @include smMax {
+          width: sm_vw(12);
+          height: sm_vw(12);
+        }
+      }
+      &:hover {
+        @include smMin {
+          background: $colorMain;
+          svg {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+    &.prev {
+      transform: rotate(180deg);
+    }
+  }
+  .c-pager__list {
+    display: flex;
+    align-items: center;
+    @include smMin {
+      padding: 0 20px;
+    }
+    li {
+      a {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-en;
+        font-size: 2rem;
+        color: $colorMain;
+        @include smMax {
+          width: sm_vw(64);
+          height: sm_vw(64);
+          font-size: sm_vw(20);
+        }
+        &:hover {
+          @include smMin {
+            background: $colorMain;
+            color: #Fff;
+          }
+        }
+      }
+    }
+    li.is-active {
+      a {
+        background: $colorMain;
+        color: #Fff;
+        pointer-events: none;
+      }
+    }
+    li.dot {
+      width: 30px;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      color: $colorMain;
+      margin: 0 5px;
+      &:before,
+      &:after {
+        content: "・";
+      }
+    }
+  }
+}
