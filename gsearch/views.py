@@ -50,7 +50,7 @@ def download_file(request):
     if 'scraped_data' in request.session:
         context = request.session['scraped_data']
         response = HttpResponse(content_type='text/csv')
-        filename = "GoogleScrap.xlsx"
+        filename = "GoogleScrap.xls"
         response['Content-Disposition'] = f'attachment; filename="{filename}"'
         writer = csv.writer(response)
         writer.writerow(['Title', 'Link'])
