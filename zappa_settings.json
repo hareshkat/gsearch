@@ -1,0 +1,16 @@
+{
+    "dev": {
+        "aws_region": "us-east-2",
+        "django_settings": "googlescrapper.settings",
+        "profile_name": "default",
+        "project_name": "googlescrapper",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-gsearch",
+        "environment_variables": {
+            "DB_NAME": "gscrap",
+            "DB_USER": "admin",
+            "DB_PASSWORD": "Mysql123",
+            "DB_HOST": "django-db.cpt52mjojdzg.us-east-2.rds.amazonaws.com"
+        }
+    }
+}

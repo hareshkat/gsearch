@@ -1,0 +1,1078 @@
+@use "../../foundation/setting" as *;
+/* ======  bounce  =========*/
+.bounce-in {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+
+  &.is_action {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    transition: -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s, -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*=========== Infinite_Animation_Library  ===============*/
+.wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.con {
+  display: inline-block;
+}
+
+.miniCon {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+/****--------- エンジン ---------****/
+.engine {
+  animation: engine 0.2s infinite;
+  -webkit-animation: engine 0.2s infinite;
+  -moz-animation: engine 0.2s infinite;
+}
+
+@keyframes engine {
+  0% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
+
+  50% {
+    transform: scale(1, 0.98) translate(0%, 1.5%);
+  }
+
+  100% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
+}
+
+@-webkit-keyframes engine {
+  0% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+  }
+
+  50% {
+    -webkit-transform: scale(1, 0.98) translate(0%, 1.5%);
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+  }
+}
+
+@-moz-keyframes engine {
+  0% {
+    -moz-transform: scale(1, 1) translate(0%, 0%);
+  }
+
+  50% {
+    -moz-transform: scale(1, 0.98) translate(0%, 1.5%);
+  }
+
+  100% {
+    -moz-transform: scale(1, 1) translate(0%, 0%);
+  }
+}
+
+/****--------- 雲 ---------****/
+.cloud {
+  animation: cloud ease-in-out 4s infinite alternate;
+  -webkit-animation: cloud ease-in-out 4s infinite alternate;
+  -moz-animation: cloud ease-in-out 4s infinite alternate;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-30px, 0%);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cloud {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(-30px, 0%);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cloud {
+  0% {
+    -moz-transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    -moz-transform: translate(-30px, 0%);
+    opacity: 0;
+  }
+}
+
+/****--------- ふわふわ ---------****/
+.fuwax2 {
+  animation: fuwax2 ease-in-out 2s infinite alternate;
+  -webkit-animation: fuwax2 ease-in-out 2s infinite alternate;
+  -moz-animation: fuwax2 ease-in-out 2s infinite alternate;
+}
+
+@keyframes fuwax2 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  100% {
+    transform: translate(0%, -30px);
+  }
+}
+
+@-webkit-keyframes fuwax2 {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  100% {
+    -webkit-transform: translate(0%, -30px);
+  }
+}
+
+@-moz-keyframes fuwax2 {
+  0% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  100% {
+    -moz-transform: translate(0%, -30px);
+  }
+}
+
+/****--------- 回転 ---------****/
+.spin {
+  animation: spin 5s linear infinite;
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+/****--------- ジャンプ ---------****/
+.jump {
+  animation: jump 5s infinite;
+  -webkit-animation: jump 5s infinite;
+  -moz-animation: jump 5s infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  3% {
+    transform: translate(0, -20px);
+  }
+
+  5% {
+    transform: translate(0, 0px);
+  }
+
+  6% {
+    transform: translate(0, -5px);
+  }
+
+  7% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translate(0, 0px);
+  }
+
+  3% {
+    -webkit-transform: translate(0, -20px);
+  }
+
+  5% {
+    -webkit-transform: translate(0, 0px);
+  }
+
+  6% {
+    -webkit-transform: translate(0, -5px);
+  }
+
+  7% {
+    -webkit-transform: translate(0, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0px);
+  }
+}
+
+@-moz-keyframes jump {
+  0% {
+    -moz-transform: translate(0, 0px);
+  }
+
+  3% {
+    -moz-transform: translate(0, -20px);
+  }
+
+  5% {
+    -moz-transform: translate(0, 0px);
+  }
+
+  6% {
+    -moz-transform: translate(0, -5px);
+  }
+
+  7% {
+    -moz-transform: translate(0, 0px);
+  }
+
+  100% {
+    -moz-transform: translate(0, 0px);
+  }
+}
+
+/****--------- ふりこ ---------****/
+.pendulum {
+  transform-origin: top;
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  animation: pendulum ease-in-out 3s infinite alternate;
+  -webkit-animation: pendulum ease-in-out 3s infinite alternate;
+  -moz-animation: pendulum ease-in-out 3s infinite alternate;
+}
+
+@keyframes pendulum {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@-webkit-keyframes pendulum {
+  0% {
+    -webkit-transform: rotate(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+
+@-moz-keyframes pendulum {
+  0% {
+    -moz-transform: rotate(10deg);
+  }
+
+  100% {
+    -moz-transform: rotate(-10deg);
+  }
+}
+
+/****--------- ボール ---------****/
+.ball {
+  animation: ball 0.6s alternate infinite;
+  -webkit-animation: ball 0.6s alternate infinite;
+  -moz-animation: ball 0.6s alternate infinite;
+}
+
+@keyframes ball {
+  0% {
+    transform: translate(0%, 0%) rotateX(25deg);
+  }
+
+  100% {
+    transform: translate(0%, -60px);
+  }
+}
+
+@-webkit-keyframes ball {
+  0% {
+    -webkit-transform: translate(0%, 0%) rotateX(25deg);
+  }
+
+  100% {
+    -webkit-transform: translate(0%, -60px);
+  }
+}
+
+@-moz-keyframes ball {
+  0% {
+    -moz-transform: translate(0%, 0%) rotateX(25deg);
+  }
+
+  100% {
+    -moz-transform: translate(0%, -60px);
+  }
+}
+
+/****--------- 登場 ---------****/
+.appearance {
+  opacity: 0;
+  animation: appearance 2.5s 1s 1 forwards;
+  -webkit-animation: appearance 2.5s 1s 1 forwards;
+  -moz-animation: appearance 2.5s 1s 1 forwards;
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: translate(0, 200px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -50px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(0, -20px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+@-webkit-keyframes appearance {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 200px);
+  }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: translate(0, -50px);
+  }
+
+  15% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translate(0, -20px);
+  }
+
+  25% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px);
+  }
+}
+
+@-moz-keyframes appearance {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(0, 200px);
+  }
+
+  10% {
+    opacity: 1;
+    -moz-transform: translate(0, -50px);
+  }
+
+  15% {
+    opacity: 1;
+    -moz-transform: translate(0, 0px);
+  }
+
+  20% {
+    opacity: 1;
+    -moz-transform: translate(0, -20px);
+  }
+
+  25% {
+    opacity: 1;
+    -moz-transform: translate(0, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translate(0, 0px);
+  }
+}
+
+/****--------- 登場（コトン） ---------****/
+.koton {
+  opacity: 0;
+  animation: koton 0.5s 1.5s 1 forwards;
+  -webkit-animation: koton 0.5s 1.5s 1 forwards;
+  -moz-animation: koton 0.5s 1.5s 1 forwards;
+}
+
+@keyframes koton {
+  0% {
+    transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(0%, 0%);
+  }
+
+  30% {
+    transform: translate(0%, -10%);
+  }
+
+  50% {
+    transform: translate(0%, 0%);
+  }
+
+  60% {
+    transform: translate(0%, -3%);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(0%, 0%);
+  }
+
+  90% {
+    transform: translate(0%, -1%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes koton {
+  0% {
+    -webkit-transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  30% {
+    -webkit-transform: translate(0%, -10%);
+  }
+
+  50% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  60% {
+    -webkit-transform: translate(0%, -3%);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  90% {
+    -webkit-transform: translate(0%, -1%);
+  }
+
+  100% {
+    -webkit-transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes koton {
+  0% {
+    -moz-transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  20% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  30% {
+    -moz-transform: translate(0%, -10%);
+  }
+
+  50% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  60% {
+    -moz-transform: translate(0%, -3%);
+    opacity: 1;
+  }
+
+  80% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  90% {
+    -moz-transform: translate(0%, -1%);
+  }
+
+  100% {
+    -moz-transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+/****--------- 登場（コトン） ---------****/
+.koton {
+  opacity: 0;
+  animation: koton 0.5s 1.5s 1 forwards;
+  -webkit-animation: koton 0.5s 1.5s 1 forwards;
+  -moz-animation: koton 0.5s 1.5s 1 forwards;
+}
+
+@keyframes koton {
+  0% {
+    transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(0%, 0%);
+  }
+
+  30% {
+    transform: translate(0%, -10%);
+  }
+
+  50% {
+    transform: translate(0%, 0%);
+  }
+
+  60% {
+    transform: translate(0%, -3%);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(0%, 0%);
+  }
+
+  90% {
+    transform: translate(0%, -1%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes koton {
+  0% {
+    -webkit-transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  30% {
+    -webkit-transform: translate(0%, -10%);
+  }
+
+  50% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  60% {
+    -webkit-transform: translate(0%, -3%);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translate(0%, 0%);
+  }
+
+  90% {
+    -webkit-transform: translate(0%, -1%);
+  }
+
+  100% {
+    -webkit-transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes koton {
+  0% {
+    -moz-transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  20% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  30% {
+    -moz-transform: translate(0%, -10%);
+  }
+
+  50% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  60% {
+    -moz-transform: translate(0%, -3%);
+    opacity: 1;
+  }
+
+  80% {
+    -moz-transform: translate(0%, 0%);
+  }
+
+  90% {
+    -moz-transform: translate(0%, -1%);
+  }
+
+  100% {
+    -moz-transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+/*---- animationbutton ---*/
+
+/* required：
+<button><span>hover me</span></button> */
+
+/* .head_banner_img {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+    	display:-webkit-box;
+  	display:-ms-flexbox;
+  	display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  width: 210px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+button span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+} */
+.head_cta {
+  /* animation: rotate 0.7s ease-in-out both; */
+}
+
+/* button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+} */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+/* =====  humberger menu  ===== */
+#menu-btn-check {
+  display: none;
+}
+
+.menu-btn {
+  position: fixed;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  left: 17%;
+  top: clamp(6px, calc(0.375rem + ((1vw - 7.68px) * 3.6458)), 48px);
+  opacity: 1;
+  display: block;
+}
+
+.close_btn {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  z-index: 90;
+  top: 5%;
+  right: 2%;
+  transition: all 0.6s;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after,
+.close_btn span:before,
+.close_btn span:after {
+  content: '';
+  display: block;
+  height: clamp(2px, calc(0.125rem + ((1vw - 7.68px) * 0.2604)), 5px);
+  width: clamp(30px, calc(1.875rem + ((1vw - 3.2px) * 10.6061)), 100px);
+  border-radius: 3px;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+}
+
+.menu-btn span:before,
+.close_btn span:before {
+  bottom: clamp(5px, calc(0.3125rem + ((1vw - 7.68px) * 1.2153)), 19px);
+  width: clamp(30px, calc(1.875rem + ((1vw - 3.2px) * 6.8182)), 75px);
+}
+
+.close_btn span:before {
+  width: clamp(15px, calc(0.9375rem + ((1vw - 7.68px) * 3.9063)), 60px);
+}
+
+.menu-btn span:after,
+.close_btn span:after {
+  width: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 4.5455)), 50px);
+}
+
+.menu-btn span:after {
+  top: clamp(5px, calc(0.3125rem + ((1vw - 7.68px) * 1.2153)), 19px);
+}
+
+.menu-content {
+  width: clamp(215px, calc(13.4375rem + ((1vw - 7.68px) * 52.6042)), 821px);
+  position: fixed;
+  top: 0;
+  right: 100%;
+  /*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #e8e8e8;
+  transition: all 0.5s;
+  /*アニメーション設定*/
+}
+
+.menu-content ul {
+  padding: 10% 0 0;
+}
+
+.menu-content ul li {
+  list-style: none;
+  height: clamp(40px, calc(2.5rem + ((1vw - 3.75px) * 3.3657)), 92px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-content ul li:nth-of-type(2n-1) {
+  background-color: #fff;
+}
+
+.menu-content ul li:nth-of-type(2n) {
+  background-color: #e8e8e8;
+}
+
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: clamp(12px, calc(0.75rem + ((1vw - 3.75px) * 0.4531)), 19px);
+  box-sizing: border-box;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.2em;
+  font-weight: bolder;
+}
+
+.menu-content ul li a::before {
+  content: '';
+  width: clamp(8px, calc(0.5rem + ((1vw - 7.68px) * 1.1285)), 21px);
+  height: clamp(8px, calc(0.5rem + ((1vw - 7.68px) * 1.1285)), 21px);
+  border-top: solid clamp(1px, calc(0.0625rem + ((1vw - 7.68px) * 0.1736)), 3px) #000;
+  border-right: solid clamp(1px, calc(0.0625rem + ((1vw - 7.68px) * 0.1736)), 3px) #000;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 3%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 2px 2px 2px 2px;
+}
+
+#menu-btn-check:checked~.menu-content {
+  left: 0;
+  /*メニューを画面内へ*/
+}
+
+#menu-btn-check:checked~.menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+  /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.close_btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+  width: clamp(16px, calc(1rem + ((1vw - 7.68px) * 1.2153)), 30px);
+}
+
+#menu-btn-check:checked~.close_btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+  width: clamp(16px, calc(1rem + ((1vw - 7.68px) * 1.2153)), 30px);
+}
+
+#menu-btn-check:checked+.menu-btn {
+  display: none;
+}
+
+.close_btn span::before {
+  transform: rotate(45deg);
+  width: clamp(16px, calc(1rem + ((1vw - 7.68px) * 1.2153)), 30px);
+  top: 0;
+}
+
+.close_btn span::after {
+  transform: rotate(-45deg);
+  width: clamp(16px, calc(1rem + ((1vw - 7.68px) * 1.2153)), 30px);
+}
+
+// ===========  スクロールで背景が横移動  ==========
+#scroll_slide {
+  //bg要素のあるid=scroll_slideを設定してください
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://picsum.photos/id/163/900/400);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: center left; //横方向ではleftかrightを使用
+  transition-property: background-position;
+  transition-duration: 0.3s;
+  transition-delay: 0.01s;
+}
+
+// =========  無限自動スライドするスライダー  ==========
+.tp-abSlider {
+  position: relative;
+  overflow: hidden;
+  margin-top: -15.625vw;
+  margin-right: -11.5625vw;
+  width: 56.875vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .tp-abSlider {
+    margin-top: 0;
+    margin-right: -16.4rem;
+    margin-left: -16.4rem;
+    width: auto;
+  }
+}
+
+.auto_slider {
+  display: inline-flex;
+  -webkit-animation: auto_slider 70s linear 0s infinite normal both;
+  animation: auto_slider 70s linear 0s infinite normal both;
+}
+
+@-webkit-keyframes auto_slider {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes auto_slider {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.tp-abSlider__item {
+  padding: 0 0.46875vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .tp-abSlider__item {
+    padding: 0 0.3rem;
+  }
+}
+
+.tp-abSlider__item .c-picture {
+  overflow: hidden;
+  width: 23.4375vw;
+  border-radius: 3.125vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .tp-abSlider__item .c-picture {
+    width: 11rem;
+    border-radius: 3rem;
+  }
+}
+
+.tp-abSlider__item .c-picture picture {
+  padding-top: calc(1096 / 600 * 100%);
+}
+
+@media only screen and (max-width: 767px) {
+  .tp-abSlider__item .c-picture picture {
+    padding-top: calc(204 / 110 * 100%);
+  }
+}
+
+// >> html
+// <ul class="tp-abSlider__list c-stoppableAnimationTarget"><li class="tp-abSlider__item"><div class="c-picture "><picture><img src="/assets/img/top/about/slide1.jpg" alt="" loading="lazy"></picture></div></li><li class="tp-abSlider__item"><div class="c-picture "><picture><img src="/assets/img/top/about/slide2.jpg" alt="" loading="lazy"></picture></div></li><li class="tp-abSlider__item"><div class="c-picture "><picture><img src="/assets/img/top/about/slide3.jpg" alt="" loading="lazy"></picture></div></li><li class="tp-abSlider__item"><div class="c-picture "><picture><img src="/assets/img/top/about/slide4.jpg" alt="" loading="lazy"></picture></div></li><li class="tp-abSlider__item"><div class="c-picture "><picture><img src="/assets/img/top/about/slide5.jpg" alt="" loading="lazy"></picture></div></li><li class="tp-abSlider__item"><div class="c-picture "><picture><img src="/assets/img/top/about/slide6.jpg" alt="" loading="lazy"></picture></div></li></ul>
+
+
+
+
+
+// ==================================================
+// ===  hover_animation
+// ==================================================
+a.arrow_to_circle::before {
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: -10px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #00e0cd;
+  border-bottom: 2px solid #00e0cd;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+a.arrow_to_circle:hover::before {
+  background: #00e0cd;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%) rotate(-315deg);
+  transform: translateY(-50%) rotate(-315deg);
+}
