@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  </head>
+  <body>
+    <main class="f_cc scraping">
+      <section class="login_form">
+        <div class="head-logo mA"><img src="{% static 'assets/images/logo.svg' %}" alt=""></div>
+        <div class="form__wrap">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="search-img"><img src="{% static 'assets/images/search.svg' %}" alt=""></div>
+            <div class="search_input mA">
+              <input class="form-control" type="text" name="q" autofocus placeholder="keyword" required>
+            </div>
+            <div class="page_txt f_yc txt_r txt_md x_end">出力したいページ数を入力
+              <input type="number" name="page">　<span class="txt_md pt5">ページ</span>
+            </div>
+            <button class="run-img mA" type="submit"><img src="{% static 'assets/images/run.svg' %}" alt=""></button>
+<!--            <div class="run-img mA"><img src="{% static 'assets/images/run.svg' %}" alt=""></div>-->
+            <div class="caution txt_md txt_c">出力が完了後下記ダウンロードボタンより確認ください。</div>
+<!--            <button class="btn_dl mA" type="submit">Search</button>-->
+          </form>
+          {% if results %}
+          <div class="">
+            <form method="POST" action="{% url 'download_file' %}">
+              {% csrf_token %}
+              <button class="btn mA" type="submit"><img src="{% static 'assets/images/download.svg' %}" alt=""></button>
+            </form>
+          </div>
+          {% endif %}
+          <a href="{% url 'logout' %}" class="btn_logout mA" type="submit"><img src="{% static 'assets/images/logout.svg' %}" alt=""></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

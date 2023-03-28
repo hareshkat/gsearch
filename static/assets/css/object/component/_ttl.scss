@@ -1,0 +1,241 @@
+@use "../../foundation/setting" as *;
+
+//==========================================================================
+//_ttl.scss
+//==========================================================================
+//-----------------------------------------------------------------
+//.c-ttl-01
+//-----------------------------------------------------------------
+.c-ttl-01 {
+  text-align: left;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 70px;
+
+  @include smMax {
+    padding-bottom: sm_vw(25);
+    margin-bottom: sm_vw(20);
+  }
+
+  &:after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background: $colorMain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include smMax {
+      width: sm_vw(48);
+    }
+  }
+
+  span {
+    display: block;
+    font-family: $font-en;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: $colorMain;
+    line-height: 1;
+    letter-spacing: 0.1em;
+
+    @include smMax {
+      font-size: sm_vw(16);
+    }
+  }
+
+  b {
+    display: block;
+    font-family: $font-serif;
+    font-size: 8rem;
+    font-weight: normal;
+    line-height: 1;
+    padding-top: 10px;
+
+    @include smMax {
+      font-size: sm_vw(36);
+      padding-top: sm_vw(15);
+    }
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ttl-02
+//-----------------------------------------------------------------
+.c-ttl-02 {
+  text-align: left;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 70px;
+
+  @include smMax {
+    padding-bottom: sm_vw(25);
+    margin-bottom: sm_vw(20);
+  }
+
+  &:after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background: $colorMain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include smMax {
+      width: sm_vw(48);
+    }
+  }
+
+  span {
+    display: block;
+    font-family: $font-en;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: $colorMain;
+    line-height: 1;
+    letter-spacing: 0.1em;
+
+    @include smMax {
+      font-size: sm_vw(16);
+    }
+  }
+
+  b {
+    display: block;
+    font-family: $font-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    line-height: 1;
+    padding-top: 10px;
+
+    @include smMax {
+      font-size: sm_vw(36);
+      padding-top: sm_vw(15);
+    }
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ttl-03
+//-----------------------------------------------------------------
+.c-ttl-03 {
+  font-family: $font-serif;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 60px;
+
+  @include smMax {
+    font-size: sm_vw(30);
+    margin-bottom: sm_vw(40);
+    line-height: 1.5;
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ttl-04
+//-----------------------------------------------------------------
+.c-ttl-04 {
+  font-family: $font-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1;
+  color: $colorMain;
+  padding-left: 16px;
+  border-left: solid 2px $colorMain;
+  margin-bottom: 40px;
+
+  @include smMax {
+    font-size: sm_vw(22);
+    padding-left: sm_vw(15);
+    margin-bottom: sm_vw(30);
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ttl-05
+//-----------------------------------------------------------------
+.c-ttl-05 {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: solid 1px $colorMain;
+
+  @include smMax {
+    padding-bottom: sm_vw(10);
+    margin-bottom: sm_vw(40);
+  }
+
+  span {
+    display: block;
+    font-family: $font-en;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $colorMain;
+    line-height: 1;
+    letter-spacing: 0.1em;
+
+    @include smMax {
+      font-size: sm_vw(12);
+    }
+  }
+
+  b {
+    display: block;
+    font-family: $font-serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 15px;
+
+    @include smMax {
+      font-size: sm_vw(18);
+      padding-left: sm_vw(15);
+    }
+  }
+}
+
+//-----------------------------------------------------------------
+//customed
+//-----------------------------------------------------------------
+.page-ttl__wrap {
+  .page-ttl {
+    font-size: lg_vw(42);
+
+    @include smMax {
+      font-size: xs_vw(22);
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+.sec-ttl__wrap {
+  .sec-ttl {}
+
+  .sec-ttl-sub {
+    opacity: 0.01;
+    top: 0;
+    left: 0;
+    font-size: lg_vw(150);
+    @include smMax {
+      font-size: xs_vw(60);
+    }
+  }
+}
+
+.box-ttl__wrap {
+  .block-ttl {
+    &>span {
+      position: absolute;
+      opacity: 0.05;
+      bottom: 0;
+      right: 0;
+      color: #ffe4002e !important;
+
+    }
+  }
+}
